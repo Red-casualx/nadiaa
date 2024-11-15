@@ -1,0 +1,61 @@
+{
+	"name": "tombolStart",
+	"plugin-id": "Sprite",
+	"sid": 718709257434248,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1000,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5086441,
+						"collisionPoly": {
+							"points": [
+								0.1779948176200917,
+								0,
+								0.9998006776958341,
+								0.5812154696132596,
+								0.9413992425752442,
+								0.8248618784530387,
+								0.6649392066972294,
+								0.9950276243093923,
+								0.399043252940004,
+								0.9994475138121547,
+								0.12756627466613515,
+								0.9629834254143647,
+								0.0015945784333266893,
+								0.8121546961325967,
+								0.029499701016543752,
+								0.47569060773480665,
+								0.08889774765796292,
+								0.20386740331491712
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 695503823361967,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

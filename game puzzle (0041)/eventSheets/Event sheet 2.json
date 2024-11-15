@@ -1,0 +1,220 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 382650127407693
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "drag",
+					"sid": 358256085768309,
+					"parameters": {
+						"instance-variable": "PosX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "drag",
+					"sid": 570562540320760,
+					"parameters": {
+						"instance-variable": "PosY",
+						"value": "Self.Y"
+					}
+				}
+			],
+			"sid": 253948708114869
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "drag",
+					"sid": 929471395895697,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "drag",
+					"sid": 713641468004538
+				}
+			],
+			"sid": 659369213328504
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "drag",
+					"sid": 803630103513351,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 291167048865799,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag",
+							"sid": 679179073158394,
+							"parameters": {
+								"object": "drop"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 769435322189742,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "drag",
+									"sid": 270202986666223,
+									"parameters": {
+										"comparison": 0,
+										"number": "drop.AnimationFrame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "drag",
+									"sid": 668689120664924,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "drop.X",
+										"end-y": "drop.Y",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "drag",
+									"sid": 569752895064132,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 651482450708797
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 801286321147611
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "drag",
+									"sid": 792750520676618,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Self.PosX",
+										"end-y": "Self.PosY",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 981447433609563
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 900392403480368
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "drag",
+							"sid": 214084144653420,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Self.PosX",
+								"end-y": "Self.PosY",
+								"time": "1",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 750633211065169
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 544393499004499,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "buttonExit"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 947476467615873,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 463929133318031
+		}
+	],
+	"sid": 904344820716258
+}
